@@ -1,0 +1,22 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Dialog
+		id="GravarServicoDialog"
+		title="{view>/titulo}"
+		class="sapUiSmallMargin sapUiSizeCompact">
+   	
+   		<VBox id="vBoxServico" class="sapUiSmallMargin">
+   			<Label text="Código:" labelFor="codigo"/>
+			<Input value="{Codigo}" id="codigo" required="true" editable="{view>/codigoEdit}"/>
+			
+			<Label text="Descrição:" labelFor="descricao"/>
+			<Input value="{Descricao}" id="descricao" required="true"/>
+		</VBox>
+   		
+   		<buttons>
+   			<Button text="Salvar" press="onSaveDialog" type="Accept"/>
+   			<Button text="Fechar" press="onCloseDialog" type="Reject"/>
+   		</buttons>
+   </Dialog>
+</core:FragmentDefinition>
